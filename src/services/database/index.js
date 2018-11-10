@@ -14,4 +14,3 @@ export default () => {
     mongoose.connection.on('error', err => console.log(err))
     mongoose.connection.once('open', () => console.log('MongoDB Running...')).on('error', (e) => { throw e })
 }
-

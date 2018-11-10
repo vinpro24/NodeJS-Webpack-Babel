@@ -10,7 +10,7 @@ npm install
 ## Config
 
 ```
-/src/constants
+/src/config
 ```
 
 ## Run on development
