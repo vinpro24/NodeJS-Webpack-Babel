@@ -1,14 +1,14 @@
-import axios from 'axios';
+import axios from 'axios'
 
-const BASE_URL = 'https://www.googleapis.com/userinfo/v2/me';
+const BASE_URL = 'https://www.googleapis.com/userinfo/v2/me'
 
-const authAsync = async token => {
+const authAsync = async (token) => {
     try {
         const res = await axios.get(BASE_URL, {
             headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        });
+                Authorization: `Bearer ${token}`
+            }
+        })
 
         if (res.status === 200) {
             const user = {
@@ -18,16 +18,16 @@ const authAsync = async token => {
                 avatar: `https://pikmail.herokuapp.com/${res.data.email}?size=500`,
                 provider: {
                     uid: res.data.id,
-                    type: 'GOOGLE',
-                },
-            };
-            return user;
+                    type: 'GOOGLE'
+                }
+            }
+            return user
         }
 
-        throw new Error('No success with Google');
+        throw new Error('No success with Google')
     } catch (error) {
-        throw error;
+        throw error
     }
-};
+}
 
-export default { authAsync };
+export default { authAsync }

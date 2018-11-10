@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
-import config from '../../config';
+import mongoose from 'mongoose'
+import config from '../../config'
 
-mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
+mongoose.Promise = global.Promise
+mongoose.set('debug', true)
 
 // Connect
 export default () => {

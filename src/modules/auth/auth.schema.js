@@ -6,21 +6,28 @@ export const userInfoSchema = Yup.object().shape({
     token: Yup.string().required(),
     provider: Yup.string()
         .oneOf(PROVIDER_ENUM)
-        .required(),
+        .required()
+})
+
+export const providerFacebookSchema = Yup.object().shape({
+    token: Yup.string().required(),
+    provider: Yup.string()
+        .oneOf(PROVIDER_ENUM)
+        .required()
 })
 
 export const providerGoogleSchema = Yup.object().shape({
     token: Yup.string().required(),
     provider: Yup.string()
         .oneOf(PROVIDER_ENUM)
-        .required(),
+        .required()
 })
 
 export const providerPhoneNumberSchema = Yup.object().shape({
     phonenumber: Yup.string().required(),
     provider: Yup.string()
         .oneOf(PROVIDER_ENUM)
-        .required(),
+        .required()
 })
 
 export const providerEmailSchema = Yup.object().shape({
@@ -28,5 +35,5 @@ export const providerEmailSchema = Yup.object().shape({
     password: Yup.string().required(),
     provider: Yup.string()
         .oneOf(PROVIDER_ENUM)
-        .required(),
+        .required()
 })
