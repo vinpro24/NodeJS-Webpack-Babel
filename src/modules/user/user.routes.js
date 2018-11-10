@@ -10,6 +10,6 @@ const routes = Router()
 // routes.post('/login/phonenumber', userController.loginWithPhoneNumber);
 
 routes.get('/id/:id', userController.getUserById)
-routes.get('/me', userController.authJwt, userController.getUserInfo)
+routes.get('/me', userController.getUserInfo)
 
 export default routes
