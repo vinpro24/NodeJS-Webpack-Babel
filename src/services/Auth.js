@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
-import constants from '../constants';
+import config from '../config';
 
-const JWT_SECRET = constants.JWT_SECRET;
+const JWT_SECRET = config.JWT_SECRET;
 
 const JWT_OPTS = {
     expiresIn: '7d',
