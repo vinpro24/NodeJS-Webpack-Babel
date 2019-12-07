@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import User from '../user/user.model'
 
 import AuthService from '../../services/Auth'

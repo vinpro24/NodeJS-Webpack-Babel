@@ -6,13 +6,8 @@ const isProd = process.env.NODE_ENV === 'production'; // true or false
 module.exports = {
     mode: process.env.NODE_ENV,
     target: 'node',
-    externals: [nodeExternals({ modulesFromFile: true })],
-    entry: {
-        app: [
-            "@babel/polyfill",
-            './src/app/index.js'
-        ]
-    },
+    externals: [nodeExternals()],
+    entry: './src/index.js', // ['@babel/polyfill', './src/index.js'],
     output: {
         path: path.join(__dirname, 'build'),
         filename: isProd ? '[name].app.js' : '[name].dev.js',

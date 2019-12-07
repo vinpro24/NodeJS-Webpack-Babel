@@ -4,9 +4,9 @@ import socketIO from 'socket.io'
 
 import config from './config'
 import middleware from './services/middleware'
-import database from './services/database'
+// import database from './services/database'
 import apiRoutes from './routes/apiRoutes'
-import { socketConnection } from './modules/socketio/socketio.controller'
+// import { socketConnection } from './modules/socketio/socketio.controller'
 
 const app = express()
 const server = http.Server(app)
@@ -15,8 +15,8 @@ app.io = socketIO(server)
 
 server.listen(config.PORT, () => {
     console.log(`Server started on port ${config.PORT}`)
-    database()
+    // database()
     middleware(app)
     apiRoutes(app)
-    socketConnection(app.io)
+    // socketConnection(app.io)
 })
