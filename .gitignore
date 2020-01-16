@@ -4,3 +4,5 @@ package-lock.json
 yarn-lock.json
 test/*.log
 dist/**
+build/**
+.env

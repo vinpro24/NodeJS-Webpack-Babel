@@ -3,7 +3,7 @@
 ## Installation
 
 ```
-git clone https://github.com/vinpro24/NodeJS-Webpack-Babel.git
+git clone https://github.com/vinpro24/NodeJS-Starter.git
 npm install
 ```
 
