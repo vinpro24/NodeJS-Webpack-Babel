@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs'
-import User from '../user/user.model'
+// import User from '../user/user.model'
 
 import AuthService from '../../services/Auth'
 import AuthProvider from '../../services/authProvider'
@@ -116,6 +116,14 @@ export async function loginWithGoogle(req, res) {
 
         const jwtToken = AuthService.createToken(user)
         res.status(200).json({ data: { token: jwtToken, user } })
+    } catch (error) {
+        res.status(400).json({ message: error.message })
+    }
+}
+
+export async function test(req, res) {
+    try {
+        res.status(200).json({ data: 'success' })
     } catch (error) {
         res.status(400).json({ message: error.message })
     }
